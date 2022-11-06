@@ -4,7 +4,7 @@ def search(arr, x):
             return arr[i]
     return -1
 arr = [-1, 2, 3, 7, 10]
-x=9
+x=1
 arr1=[]
 result=search(arr, x)
 arr1.append(arr[0])
