@@ -5,6 +5,8 @@ def search(arr, x):
     return -1
 arr = [-1, 2, 3, 7, 10]
 x=9
-
+arr1=[]
 result=search(arr, x)
-print(result)
+arr1.append(arr[0])
+arr1.append(result)
+print(arr1)
