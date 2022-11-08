@@ -1,8 +1,8 @@
 def binary_search(list, item):
-    low=0
-    high=len(list)-1
+    low=-1
+    high=len(list)
 
-    while low<=high:
+    while high-low>1:
         mid=int((low+high)/2)
         guess=list[mid]
         if guess==item:
