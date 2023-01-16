@@ -1,0 +1,14 @@
+string = input('input string')
+count = 0
+na = list()
+nb = list()
+for i in range(len(string)):
+  if string[i] == 'a':
+    na.append(i)
+  if string[i] == 'b':
+    nb.append(i)
+for i in range(len(na)):
+  for j in range(len(nb)):
+    if na[i] < nb[j]:
+      count += 1
+print(count)
