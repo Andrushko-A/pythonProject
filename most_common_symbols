@@ -3,3 +3,16 @@ text = input()
 arr = Counter(text.lower()).most_common()
 count_symb = dict(arr)
 print(count_symb) 
+descrybing = ''
+
+alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя '
+step = 3
+for i in text:
+  place = alphabet.find(i)
+  new_place = (place + step)%33
+  if i in alphabet:
+    descrybing += alphabet[new_place]
+  else:
+    descrybing += i
+print(descrybing)
+
