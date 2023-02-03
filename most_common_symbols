@@ -1,0 +1,5 @@
+from collections import Counter
+text = input()
+arr = Counter(text.lower()).most_common()
+count_symb = dict(arr)
+print(count_symb) 
