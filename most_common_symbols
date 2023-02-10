@@ -1,12 +1,13 @@
 from collections import Counter
 text = input()
-arr = dict(Counter(text.lower()).most_common())
+arr = dict(Counter(text).most_common())
 count_symb = dict(arr)
 print(count_symb) 
 descrybing = ''
 encrybing = ''
+new_list = list()
 
-alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя. '
+alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя.'
 step = 3
 for i in text:
   place = alphabet.find(i)
@@ -20,15 +21,11 @@ print(descrybing)
 descr = dict(Counter(descrybing).most_common())
 print(descr)
 
-slovar = dict(zip(arr.keys(), descr.keys()))
+slovar = dict(zip(descr.keys(),arr.keys()))
 print(slovar)
 
 for i in descrybing:
-  plac = slovar.values.find(i)
-  if i in slovar.values:
-    encrybing += slovar.keys(i)
-  else:
-    encrybing += i
+  new_list.append(slovar.get(i))
+  encrybing = ''.join(new_list)
 print(encrybing)
-
 
