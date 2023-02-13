@@ -1,0 +1,9 @@
+def P(stroka):
+  if len(stroka) <= 1:
+    return True
+  if stroka[0] != stroka[-1]:
+    False
+  else:
+    return P(stroka[1:-1])
+P('шалаш')
+  
