@@ -1,0 +1,8 @@
+import time
+import numpy as np
+A = np.array([[1, 2, 3],[2, 3, 3], [4, 5, 6]])
+print(A)
+start_time = time.monotonic()
+print(np.linalg.det(A))
+end_time = time.monotonic()
+print(end_time - start_time)
