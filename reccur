@@ -1,0 +1,6 @@
+def T(n):
+  if n == 1:
+    return 1
+  else:
+    return 3 * T(n/2) + n
+T(3)
