@@ -1,0 +1,7 @@
+def a(s):
+  if len(s) == 1 or len(s) == 2:
+    return s
+  else:
+    return s[0] + '(' + a(s[1:-1]) + ')' + s[-1]
+stroka= 'klavaa'
+a(stroka)
